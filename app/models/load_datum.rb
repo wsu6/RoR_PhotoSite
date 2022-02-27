@@ -1,0 +1,3 @@
+class LoadDatum < ApplicationRecord
+
+end

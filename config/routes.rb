@@ -8,8 +8,10 @@ HW2::Application.routes.draw do
   get 'say/hello' => 'say#hello'
   get 'users/index' => 'users#users'
   get 'photos/index' => 'photos#photos'
-  resources :photos do
-    resources :photos, only: :photos
+  get 'photos/index/:id' => 'photos#show'
+  get 'users/index/:id' => 'users#show'
+  resources :users do
+    resources :users, only: :users
     #-> url.com/users/:user_id/recruiters
   end
 end

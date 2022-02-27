@@ -1,5 +1,9 @@
 <h1> User List</h1>
-<td> <%= @users.id %></td>
-<td> <%= @users.first_name %></td>
-<td> <%= @users.last_name %></td>
-<br><br>
+<%for user in @users %>
+  <td> <%= user.id %></td>
+  <%= link_to users_index_path do %>
+    <td> <%= user.first_name %></td>
+    <td> <%= user.last_name %></td>
+  <%end %>
+  <br><br>
+<%end %>

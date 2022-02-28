@@ -1,9 +1,8 @@
 <h1> User List</h1>
-<%for user in @users %>
-  <td> <%= user.id %></td>
-  <%= link_to users_index_path do %>
-    <td> <%= user.first_name %></td>
-    <td> <%= user.last_name %></td>
-  <%end %>
-  <br><br>
-<%end %>
+<ul id = "users">
+  <% @users.each do |user| %>
+  <tb><%= link_to user.first_name, {:action => 'show', :id => user.id} %></tb>
+  <tb><%= link_to user.last_name, {:action => 'show', :id => user.id} %></tb><br><br>
+<% end %>
+
+</ul>

@@ -10,8 +10,6 @@ HW2::Application.routes.draw do
   get 'photos/index' => 'photos#photos'
   get 'photos/index/:id' => 'photos#show'
   get 'users/index/:id' => 'users#show'
-  resources :users do
-    resources :users, only: :users
-    #-> url.com/users/:user_id/recruiters
-  end
+
+
 end

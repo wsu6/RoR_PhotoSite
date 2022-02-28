@@ -4,8 +4,9 @@
   <li><%= photo.date_time %></li><br>
   <%for comment in photo.comments %>
     <li><%= comment.comment_text %></li>
-    <tb>Comment Created on: </tb>
-    <li><%= comment.date_time %></li>
-    <%end %>
+    <td><%= link_to comment.user.first_name + " " + comment.user.last_name, comment.user_id %></td>
+    <tb>Commented on: </tb>
+    <tb><%= comment.date_time %></tb>
+  <%end %>
 <% end %>
 

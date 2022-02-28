@@ -6,8 +6,9 @@ class PhotosController < ApplicationController
     @userf = User.find params[:id]
     render :action => 'status'
   end
-  def showcom
-    @photof = Photo.find params[:id]
-    render :action => 'status'
+
+  def back
+    @userb = User.find params[:id]
+    render :action => 'users/users_status'
   end
 end

@@ -1,2 +1,4 @@
-<%= image_tag @phof.file_name.to_s, :size => '280x220' %>
-<p>Posted by <%= @phof.user.first_name %></p>
+<%for photo in @userf.photos %>
+  <%= image_tag photo.file_name.to_s, :size => '400x400' %>
+  <li><%= photo.created_at %></li>
+<% end %>

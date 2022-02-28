@@ -6,5 +6,4 @@ class UsersController < ApplicationController
     @userf = User.find params[:id]
     render :action => 'user_status'
   end
-
 end

@@ -4,6 +4,8 @@ Deployment to AWS:
 
 Youtube Link: https://www.youtube.com/watch?v=QY7CMFvh_h8
 
+Deployed URL: ec2-13-56-156-166.us-west-1.compute.amazonaws.com
+
 Create Dockerfile and place under same directory as Gemfiles
 
 docker build -t aws_photosite .

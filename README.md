@@ -1,6 +1,8 @@
 # README
 
-Deployment to AWS
+Deployment to AWS:
+
+Youtube Link: https://www.youtube.com/watch?v=QY7CMFvh_h8
 
 Create Dockerfile and place under same directory as Gemfiles
 

@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Deployment to AWS
 
-Things you may want to cover:
+Create Dockerfile and place under same directory as Gemfiles
 
-* Ruby version
+docker build -t aws_photosite .
 
-* System dependencies
+To verify image after build:
+docker images --filter reference=aws_photosite 
 
-* Configuration
+Run docker image locally:
+docker run -p 3000:3000 aws_photosite
 
-* Database creation
+Create repository on ECR name it photosite
+aws ecr get-login-password - - region us-west-1 | docker login –username AWS –password-stdin *userid*.dkr.ecr.us-west-1.amazonaws.com
 
-* Database initialization
+Find docker image to push
+docker images
 
-* How to run the test suite
+Tag the image that needs to be pushed
+docker tag *IMAGE_ID* *userid*.dkr.ecr.us-west-1.amazonaws.com/photosite:latest
 
-* Services (job queues, cache servers, search engines, etc.)
+Push the image to AWS Registery 
+docker push *userid*.dkr.ecr.us-west-1.amazonaws.com/photosite:latest
 
-* Deployment instructions
+Create task definition, instance and S3 bucket
 
-* ...
+Run and connect to instance for complete deployment
